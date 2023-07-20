@@ -1,0 +1,49 @@
+.app {
+  text-align: center;
+}
+
+.button-holder {
+  margin-top: 3%;
+}
+
+.content {
+  align-items: center;
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  min-height: 100vh;
+}
+
+.link {
+  color: #ffffff;
+}
+
+.logo {
+  height: 20vmin;
+}
+
+.pane {
+  width: 50%;
+}
+
+.split {
+  display: flex;
+  width: 100%;
+}
+
+.transcript {
+  text-align: left;
+}
+
+.transcript-holder {
+  border-style: solid;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 5%;
+  margin-top: 3%;
+  font-size: 20px;
+  padding-left: 2%;
+  padding-right: 2%;
+}

@@ -5,8 +5,8 @@
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
-    "@mui/lab": "^5.0.0-alpha.137",
-    "@mui/material": "^5.14.2",
+    "@mui/lab": "^5.0.0-alpha.138",
+    "@mui/material": "^5.14.3",
     "axios": "^1.4.0",
     "eslint": "^8.46.0",
     "prettier": "^3.0.0",

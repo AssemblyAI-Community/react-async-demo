@@ -15,7 +15,7 @@ async function transcript(audio_url) {
     .post(
       "https://api.assemblyai.com/v2/transcript",
       { audio_url: audio_url },
-      { headers: headers }
+      { headers: headers },
     )
     .catch((error) => {
       alert(error.response.data.error);

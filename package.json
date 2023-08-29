@@ -1,15 +1,15 @@
 {
   "name": "aai-react-async-demo",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
-    "@mui/lab": "^5.0.0-alpha.140",
-    "@mui/material": "^5.14.5",
-    "axios": "^1.4.0",
-    "eslint": "^8.47.0",
-    "prettier": "^3.0.2",
+    "@mui/lab": "^5.0.0-alpha.142",
+    "@mui/material": "^5.14.7",
+    "axios": "^1.5.0",
+    "eslint": "^8.48.0",
+    "prettier": "^3.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "^5.0.1"
@@ -33,5 +33,5 @@
       "last 1 safari version"
     ]
   },
-  "packageManager": "yarn@3.6.2"
+  "packageManager": "yarn@3.6.3"
 }

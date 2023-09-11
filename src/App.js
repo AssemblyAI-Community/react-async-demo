@@ -2,8 +2,7 @@ import "./App.css";
 import axios from "axios";
 import Logo from "./assembly_logo.png";
 import React from "react";
-import { LoadingButton } from "@mui/lab";
-import { CircularProgress, Input, TextField } from "@mui/material";
+import { Button, CircularProgress, Input, TextField } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 async function transcript(audio_url) {
@@ -15,7 +14,7 @@ async function transcript(audio_url) {
     .post(
       "https://api.assemblyai.com/v2/transcript",
       { audio_url: audio_url },
-      { headers: headers },
+      { headers: headers }
     )
     .catch((error) => {
       alert(error.response.data.error);
@@ -151,14 +150,16 @@ export default function App() {
                 value={audioUrl}
               />
               <div className={"button-holder"}>
-                <LoadingButton
-                  loading={isUrlLoading}
-                  loadingIndicator={<CircularProgress color={"primary"} />}
-                  onClick={onClickSubmit("audio_url")}
-                  variant={"outlined"}
-                >
-                  Submit
-                </LoadingButton>
+                {isUrlLoading ? (
+                  <CircularProgress color={"primary"} />
+                ) : (
+                  <Button
+                    onClick={onClickSubmit("audio_url")}
+                    variant={"outlined"}
+                  >
+                    Submit
+                  </Button>
+                )}
               </div>
               {urlTranscriptText !== "" ? (
                 <div className={"transcript-holder"}>
@@ -186,14 +187,16 @@ export default function App() {
                 type={"file"}
               />
               <div className={"button-holder"}>
-                <LoadingButton
-                  loading={isUploadLoading}
-                  loadingIndicator={<CircularProgress color={"primary"} />}
-                  onClick={onClickSubmit("uploaded_file")}
-                  variant={"outlined"}
-                >
-                  Submit
-                </LoadingButton>
+                {isUploadLoading ? (
+                  <CircularProgress color={"primary"} />
+                ) : (
+                  <Button
+                    onClick={onClickSubmit("uploaded_file")}
+                    variant={"outlined"}
+                  >
+                    Submit
+                  </Button>
+                )}
               </div>
               {uploadTranscriptText !== "" ? (
                 <div className={"transcript-holder"}>

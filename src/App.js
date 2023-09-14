@@ -5,58 +5,6 @@ import React from "react";
 import { Button, CircularProgress, Input, TextField } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-async function transcript(audio_url) {
-  let error_thrown = false;
-  const headers = {
-    authorization: "YOUR_API_KEY_HERE",
-  };
-  const response = await axios
-    .post(
-      "https://api.assemblyai.com/v2/transcript",
-      { audio_url: audio_url },
-      { headers: headers }
-    )
-    .catch((error) => {
-      alert(error.response.data.error);
-      error_thrown = true;
-    });
-  if (error_thrown) {
-    return null;
-  }
-  const transcriptID = response.data.id;
-  const pollingEndpoint = `https://api.assemblyai.com/v2/transcript/${transcriptID}`;
-  while (true) {
-    const pollingResponse = await axios.get(pollingEndpoint, { headers });
-    const transcriptionResult = pollingResponse.data;
-    if (transcriptionResult.status === "completed") {
-      return transcriptionResult;
-    } else if (transcriptionResult.status === "error") {
-      alert(transcriptionResult.error);
-      return null;
-    } else {
-      await new Promise((resolve) => setTimeout(resolve, 3000));
-    }
-  }
-}
-
-async function upload(file) {
-  let error_thrown = false;
-  const headers = {
-    authorization: "YOUR_API_KEY_HERE",
-  };
-  const uploadResponse = await axios
-    .post("https://api.assemblyai.com/v2/upload", file, { headers: headers })
-    .catch((error) => {
-      alert(error.response.data.error);
-      error_thrown = true;
-    });
-  if (error_thrown) {
-    return null;
-  }
-  const upload_url = uploadResponse.data.upload_url;
-  return transcript(upload_url);
-}
-
 const theme = createTheme({
   palette: {
     primary: {
@@ -65,15 +13,53 @@ const theme = createTheme({
   },
 });
 
+async function transcribe(audio_url) {
+  const response = await axios
+    .post("http://localhost:8000/transcript", {
+      audio_url: audio_url,
+    })
+    .catch((error) => {
+      alert(error.response.data.error);
+      return null;
+    });
+
+  return response?.data;
+}
+
+async function upload(file) {
+  const formData = new FormData();
+  formData.append("file", file);
+  const response = await axios
+    .post("http://localhost:8000/upload", formData, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    })
+    .catch((error) => {
+      alert(error.response.data.error);
+      return null;
+    });
+
+  return transcribe(response?.data);
+}
+
 export default function App() {
   const [audioUrl, setAudioUrl] = React.useState("");
   const [isUploadError, setIsUploadError] = React.useState(false);
   const [isUploadLoading, setIsUploadLoading] = React.useState(false);
   const [isUrlError, setIsUrlError] = React.useState(false);
   const [isUrlLoading, setIsUrlLoading] = React.useState(false);
+  const [selectedFile, setSelectedFile] = React.useState("");
   const [uploadTranscriptText, setUploadTranscriptText] = React.useState("");
-  const [uploadedFile, setUploadedFile] = React.useState("");
   const [urlTranscriptText, setUrlTranscriptText] = React.useState("");
+
+  const onChangeFile = (event) => {
+    setSelectedFile(event.target.files[0]);
+  };
+
+  const onChangeUrl = (event) => {
+    setAudioUrl(event.target.value);
+  };
 
   const onClickSubmit = (type) => () => {
     if (type === "audio_url" && audioUrl === "") {
@@ -81,39 +67,23 @@ export default function App() {
     } else if (type === "audio_url" && audioUrl !== "") {
       setIsUrlError(false);
       setIsUrlLoading(true);
-      transcript(audioUrl).then((result) => {
+      transcribe(audioUrl).then((result) => {
         setIsUrlLoading(false);
-        if (result !== null) {
+        if (result) {
           setUrlTranscriptText(result.text);
         }
       });
-    } else if (type === "uploaded_file" && uploadedFile === "") {
+    } else if (type === "uploaded_file" && selectedFile === "") {
       setIsUploadError(true);
-    } else if (type === "uploaded_file" && uploadedFile !== "") {
+    } else if (type === "uploaded_file" && selectedFile !== "") {
       setIsUploadError(false);
       setIsUploadLoading(true);
-      upload(uploadedFile).then((result) => {
+      upload(selectedFile).then((result) => {
         setIsUploadLoading(false);
-        if (result !== null) {
+        if (result) {
           setUploadTranscriptText(result.text);
         }
       });
-    }
-  };
-
-  const onChangeUrl = (event) => {
-    setAudioUrl(event.target.value);
-  };
-
-  const readFile = (event) => {
-    const reader = new FileReader();
-    reader.onload = () => {
-      setUploadedFile(reader.result);
-    };
-    try {
-      reader.readAsArrayBuffer(event.target.files[0]);
-    } catch {
-      console.error("FileReader attempted to read an invalid file.");
     }
   };
 
@@ -180,9 +150,9 @@ export default function App() {
                 </a>
               </p>
               <Input
-                defaultValue={uploadedFile}
+                defaultValue={selectedFile}
                 error={isUploadError}
-                onChange={readFile}
+                onChange={onChangeFile}
                 sx={{ input: { color: "#ffffff" }, width: "50%" }}
                 type={"file"}
               />

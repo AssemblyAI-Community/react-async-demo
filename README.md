@@ -18,7 +18,7 @@ To run this demo app, navigate to where you cloned this repo to and at the top l
 
 You'll likely notice upon first trying to use the demo app that you're not authenticated. In case you haven't already, you can sign up for an AssemblyAI account [here](https://www.assemblyai.com/dashboard/signup) and find your API key on your [account dashboard](https://www.assemblyai.com/app/account).
 
-Copy that API key and replace the "YOUR_API_KEY_HERE" placeholder in `server.js`. This will make sure that you're able to use the API and monitor the status of all of your requests in your [processing queue](https://www.assemblyai.com/app/processing-queue) on your dashboard. Now you're ready to experiment with our async API!
+Copy the `.env.example` file and name it `.env`, then copy your API key and replace the `"YOUR_API_KEY"` placeholder in `.env`. This will make sure that you're able to use the API and monitor the status of all of your requests in your [processing queue](https://www.assemblyai.com/app/processing-queue) on your dashboard. Now you're ready to experiment with our async API!
 
 ## Further Customization
 

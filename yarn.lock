@@ -3658,8 +3658,10 @@ __metadata:
     "@emotion/react": "npm:^11.11.1"
     "@emotion/styled": "npm:^11.11.0"
     "@mui/material": "npm:^5.14.18"
+    assemblyai: "npm:^4.0.0"
     axios: "npm:^1.6.2"
     cors: "npm:^2.8.5"
+    dotenv: "npm:^16.3.1"
     eslint: "npm:^8.54.0"
     express: "npm:^4.18.2"
     multer: "npm:^1.4.5-lts.1"
@@ -4096,6 +4098,15 @@ __metadata:
   version: 2.0.6
   resolution: "asap@npm:2.0.6"
   checksum: b244c0458c571945e4b3be0b14eb001bea5596f9868cc50cc711dc03d58a7e953517d3f0dad81ccde3ff37d1f074701fa76a6f07d41aaa992d7204a37b915dda
+  languageName: node
+  linkType: hard
+
+"assemblyai@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "assemblyai@npm:4.0.0"
+  dependencies:
+    ws: "npm:^8.13.0"
+  checksum: 37a1883c0bdc46a1b6e3f287d39528fd2147a1a86aa50969f43a01dc0535704ac63dd1cbd26b6304802b9fc3c5987691ae2c2e5f7e460a8e5a289fcf00e1a4d5
   languageName: node
   linkType: hard
 
@@ -5706,6 +5717,13 @@ __metadata:
   version: 10.0.0
   resolution: "dotenv@npm:10.0.0"
   checksum: 55f701ae213e3afe3f4232fae5edfb6e0c49f061a363ff9f1c5a0c2bf3fb990a6e49aeada11b2a116efb5fdc3bc3f1ef55ab330be43033410b267f7c0809a9dc
+  languageName: node
+  linkType: hard
+
+"dotenv@npm:^16.3.1":
+  version: 16.3.1
+  resolution: "dotenv@npm:16.3.1"
+  checksum: 2104a65b5ae47c23208dcddf1ec7d5942468c7ac46be616d47472f62c0142ef7d8839eff52ec66828607147dd11c1055723e7d9127feea9106bf33bf5c8caccc
   languageName: node
   linkType: hard
 

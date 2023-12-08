@@ -2914,13 +2914,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@swimburger/isomorphic-streams@npm:^1.1.1":
-  version: 1.1.1
-  resolution: "@swimburger/isomorphic-streams@npm:1.1.1"
-  checksum: d7949e4cdef0bb09ecdc5a56177491912d8fb32d098ee1926b894e2a10d51a6516b752d34f262d8cad9330f7446cbd197cbf796f178c9228fdf52000d4bc8a2c
-  languageName: node
-  linkType: hard
-
 "@tootallnate/once@npm:1":
   version: 1.1.2
   resolution: "@tootallnate/once@npm:1.1.2"
@@ -3665,7 +3658,7 @@ __metadata:
     "@emotion/react": "npm:^11.11.1"
     "@emotion/styled": "npm:^11.11.0"
     "@mui/material": "npm:^5.14.18"
-    assemblyai: /Users/niels/DeepLearning/assemblyai/developer_tools/typescript
+    assemblyai: "npm:^4.0.0"
     axios: "npm:^1.6.2"
     cors: "npm:^2.8.5"
     dotenv: "npm:^16.3.1"
@@ -4108,14 +4101,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"assemblyai@file:/Users/niels/DeepLearning/assemblyai/developer_tools/typescript::locator=aai-react-async-demo%40workspace%3A.":
+"assemblyai@npm:^4.0.0":
   version: 4.0.0
-  resolution: "assemblyai@file:/Users/niels/DeepLearning/assemblyai/developer_tools/typescript#/Users/niels/DeepLearning/assemblyai/developer_tools/typescript::hash=ff9dd9&locator=aai-react-async-demo%40workspace%3A."
+  resolution: "assemblyai@npm:4.0.0"
   dependencies:
-    "@swimburger/isomorphic-streams": "npm:^1.1.1"
-    isomorphic-ws: "npm:^5.0.0"
     ws: "npm:^8.13.0"
-  checksum: 23dd11d575e7d743a133763a2891b889af64b1224d0bd5332da49e197f8bec3fc2f5306d19f72703acf15681495b83e832f484cc9da18137398d067f7c25a064
+  checksum: 37a1883c0bdc46a1b6e3f287d39528fd2147a1a86aa50969f43a01dc0535704ac63dd1cbd26b6304802b9fc3c5987691ae2c2e5f7e460a8e5a289fcf00e1a4d5
   languageName: node
   linkType: hard
 
@@ -7931,15 +7922,6 @@ __metadata:
   version: 3.1.1
   resolution: "isexe@npm:3.1.1"
   checksum: c2205d0853d31e94e1b2b73d87fa7c9405e2a6b0d71e4e3250ff336b2f5d9f529ef7588fa7308a7b176581673d3945630d197e82d4e198fa5b7004e6466b6114
-  languageName: node
-  linkType: hard
-
-"isomorphic-ws@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "isomorphic-ws@npm:5.0.0"
-  peerDependencies:
-    ws: "*"
-  checksum: c4a2f1e4e354267b9addd75d6411fdc9ae1cedab057df05ea87af7b0a9d82aa97a5da395f5234b2cdae7abc8848c7c5cebed7e04ba980cd680c4281a9c2231fd
   languageName: node
   linkType: hard
 

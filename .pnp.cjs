@@ -29,7 +29,7 @@ const RAW_RUNTIME_STATE =
           ["@emotion/react", "virtual:dd10ed5115fc11b0b4d11af5abfcd49a470c761074b5c74fa3f52748702da6b3a2b715572d17b40ae6e189862a567ac9f34a4ea623137eaeb5dea40c10f552a6#npm:11.11.1"],\
           ["@emotion/styled", "virtual:dd10ed5115fc11b0b4d11af5abfcd49a470c761074b5c74fa3f52748702da6b3a2b715572d17b40ae6e189862a567ac9f34a4ea623137eaeb5dea40c10f552a6#npm:11.11.0"],\
           ["@mui/material", "virtual:dd10ed5115fc11b0b4d11af5abfcd49a470c761074b5c74fa3f52748702da6b3a2b715572d17b40ae6e189862a567ac9f34a4ea623137eaeb5dea40c10f552a6#npm:5.14.18"],\
-          ["assemblyai", "file:/Users/niels/DeepLearning/assemblyai/developer_tools/typescript#/Users/niels/DeepLearning/assemblyai/developer_tools/typescript::hash=ff9dd9&locator=aai-react-async-demo%40workspace%3A."],\
+          ["assemblyai", "npm:4.0.0"],\
           ["axios", "npm:1.6.2"],\
           ["cors", "npm:2.8.5"],\
           ["dotenv", "npm:16.3.1"],\
@@ -4890,15 +4890,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["@swimburger/isomorphic-streams", [\
-      ["npm:1.1.1", {\
-        "packageLocation": "./.yarn/cache/@swimburger-isomorphic-streams-npm-1.1.1-cb63fc767b-d7949e4cde.zip/node_modules/@swimburger/isomorphic-streams/",\
-        "packageDependencies": [\
-          ["@swimburger/isomorphic-streams", "npm:1.1.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["@tootallnate/once", [\
       ["npm:1.1.2", {\
         "packageLocation": "./.yarn/cache/@tootallnate-once-npm-1.1.2-0517220057-e1fb1bbbc1.zip/node_modules/@tootallnate/once/",\
@@ -5819,7 +5810,7 @@ const RAW_RUNTIME_STATE =
           ["@emotion/react", "virtual:dd10ed5115fc11b0b4d11af5abfcd49a470c761074b5c74fa3f52748702da6b3a2b715572d17b40ae6e189862a567ac9f34a4ea623137eaeb5dea40c10f552a6#npm:11.11.1"],\
           ["@emotion/styled", "virtual:dd10ed5115fc11b0b4d11af5abfcd49a470c761074b5c74fa3f52748702da6b3a2b715572d17b40ae6e189862a567ac9f34a4ea623137eaeb5dea40c10f552a6#npm:11.11.0"],\
           ["@mui/material", "virtual:dd10ed5115fc11b0b4d11af5abfcd49a470c761074b5c74fa3f52748702da6b3a2b715572d17b40ae6e189862a567ac9f34a4ea623137eaeb5dea40c10f552a6#npm:5.14.18"],\
-          ["assemblyai", "file:/Users/niels/DeepLearning/assemblyai/developer_tools/typescript#/Users/niels/DeepLearning/assemblyai/developer_tools/typescript::hash=ff9dd9&locator=aai-react-async-demo%40workspace%3A."],\
+          ["assemblyai", "npm:4.0.0"],\
           ["axios", "npm:1.6.2"],\
           ["cors", "npm:2.8.5"],\
           ["dotenv", "npm:16.3.1"],\
@@ -6357,13 +6348,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["assemblyai", [\
-      ["file:/Users/niels/DeepLearning/assemblyai/developer_tools/typescript#/Users/niels/DeepLearning/assemblyai/developer_tools/typescript::hash=ff9dd9&locator=aai-react-async-demo%40workspace%3A.", {\
-        "packageLocation": "./.yarn/cache/assemblyai-file-7ed9cef868-23dd11d575.zip/node_modules/assemblyai/",\
+      ["npm:4.0.0", {\
+        "packageLocation": "./.yarn/cache/assemblyai-npm-4.0.0-09ca38625a-37a1883c0b.zip/node_modules/assemblyai/",\
         "packageDependencies": [\
-          ["assemblyai", "file:/Users/niels/DeepLearning/assemblyai/developer_tools/typescript#/Users/niels/DeepLearning/assemblyai/developer_tools/typescript::hash=ff9dd9&locator=aai-react-async-demo%40workspace%3A."],\
-          ["@swimburger/isomorphic-streams", "npm:1.1.1"],\
-          ["isomorphic-ws", "virtual:7ed9cef868e5025adc55912797c44f78da45cf74410923870927576c6876cf2589d6a9cad6412d3d5104e2f84b0203da3faeb4612cd20a7626e8419c4dda8bc8#npm:5.0.0"],\
-          ["ws", "virtual:7ed9cef868e5025adc55912797c44f78da45cf74410923870927576c6876cf2589d6a9cad6412d3d5104e2f84b0203da3faeb4612cd20a7626e8419c4dda8bc8#npm:8.14.2"]\
+          ["assemblyai", "npm:4.0.0"],\
+          ["ws", "virtual:09ca38625aa6bcad8465e642969650ccf37b5e29a67f1b951352f1eeb77015b6e10c27a5678c2560de79e305ffe3f10bf3c22254fe8658da76a61e1a3e147453#npm:8.14.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -11085,28 +11074,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/isexe-npm-3.1.1-9c0061eead-c2205d0853.zip/node_modules/isexe/",\
         "packageDependencies": [\
           ["isexe", "npm:3.1.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["isomorphic-ws", [\
-      ["npm:5.0.0", {\
-        "packageLocation": "./.yarn/cache/isomorphic-ws-npm-5.0.0-9c72251c2d-c4a2f1e4e3.zip/node_modules/isomorphic-ws/",\
-        "packageDependencies": [\
-          ["isomorphic-ws", "npm:5.0.0"]\
-        ],\
-        "linkType": "SOFT"\
-      }],\
-      ["virtual:7ed9cef868e5025adc55912797c44f78da45cf74410923870927576c6876cf2589d6a9cad6412d3d5104e2f84b0203da3faeb4612cd20a7626e8419c4dda8bc8#npm:5.0.0", {\
-        "packageLocation": "./.yarn/__virtual__/isomorphic-ws-virtual-edcd9e8aa3/0/cache/isomorphic-ws-npm-5.0.0-9c72251c2d-c4a2f1e4e3.zip/node_modules/isomorphic-ws/",\
-        "packageDependencies": [\
-          ["isomorphic-ws", "virtual:7ed9cef868e5025adc55912797c44f78da45cf74410923870927576c6876cf2589d6a9cad6412d3d5104e2f84b0203da3faeb4612cd20a7626e8419c4dda8bc8#npm:5.0.0"],\
-          ["@types/ws", null],\
-          ["ws", "virtual:7ed9cef868e5025adc55912797c44f78da45cf74410923870927576c6876cf2589d6a9cad6412d3d5104e2f84b0203da3faeb4612cd20a7626e8419c4dda8bc8#npm:8.14.2"]\
-        ],\
-        "packagePeers": [\
-          "@types/ws",\
-          "ws"\
         ],\
         "linkType": "HARD"\
       }]\
@@ -17920,7 +17887,7 @@ const RAW_RUNTIME_STATE =
           ["webpack", "virtual:ae2f1d96c5266c3a67e7ed3f3167dba3fe28f16e06152295e15fb270d0d9ace75972d151dedb39ceee2049fcb0a28fddf52c28e2cae7d0685e30aaf9369f26f2#npm:5.89.0"],\
           ["webpack-cli", null],\
           ["webpack-dev-middleware", "virtual:22cfbc48e048aac7d6e4d93e7b364fafb45a3d2975a4c8ae1e21d14bb9db965693e6ef0068c2aea53a3753d6170d99aadb58c4a40fd70b98fd28ceb3cc434635#npm:5.3.3"],\
-          ["ws", "virtual:7ed9cef868e5025adc55912797c44f78da45cf74410923870927576c6876cf2589d6a9cad6412d3d5104e2f84b0203da3faeb4612cd20a7626e8419c4dda8bc8#npm:8.14.2"]\
+          ["ws", "virtual:09ca38625aa6bcad8465e642969650ccf37b5e29a67f1b951352f1eeb77015b6e10c27a5678c2560de79e305ffe3f10bf3c22254fe8658da76a61e1a3e147453#npm:8.14.2"]\
         ],\
         "packagePeers": [\
           "@types/webpack-cli",\
@@ -18444,10 +18411,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:7ed9cef868e5025adc55912797c44f78da45cf74410923870927576c6876cf2589d6a9cad6412d3d5104e2f84b0203da3faeb4612cd20a7626e8419c4dda8bc8#npm:8.14.2", {\
-        "packageLocation": "./.yarn/__virtual__/ws-virtual-3f313849fd/0/cache/ws-npm-8.14.2-b339ac47a2-815ff01d9b.zip/node_modules/ws/",\
+      ["virtual:09ca38625aa6bcad8465e642969650ccf37b5e29a67f1b951352f1eeb77015b6e10c27a5678c2560de79e305ffe3f10bf3c22254fe8658da76a61e1a3e147453#npm:8.14.2", {\
+        "packageLocation": "./.yarn/__virtual__/ws-virtual-e95aca3aca/0/cache/ws-npm-8.14.2-b339ac47a2-815ff01d9b.zip/node_modules/ws/",\
         "packageDependencies": [\
-          ["ws", "virtual:7ed9cef868e5025adc55912797c44f78da45cf74410923870927576c6876cf2589d6a9cad6412d3d5104e2f84b0203da3faeb4612cd20a7626e8419c4dda8bc8#npm:8.14.2"],\
+          ["ws", "virtual:09ca38625aa6bcad8465e642969650ccf37b5e29a67f1b951352f1eeb77015b6e10c27a5678c2560de79e305ffe3f10bf3c22254fe8658da76a61e1a3e147453#npm:8.14.2"],\
           ["@types/bufferutil", null],\
           ["@types/utf-8-validate", null],\
           ["bufferutil", null],\

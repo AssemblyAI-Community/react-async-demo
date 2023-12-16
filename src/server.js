@@ -18,9 +18,9 @@ const upload = multer({ dest: "temp" });
 app.post("/transcript", async (req, res) => {
   try {
     const transcript = await client.transcripts.transcribe({
-      audio: req.body.audio_url
+      audio: req.body.audio_url,
     });
-    if (transcript.status === 'error') {
+    if (transcript.status === "error") {
       return res.status(500).json(transcript);
     }
 

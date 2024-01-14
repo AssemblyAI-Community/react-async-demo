@@ -61,9 +61,7 @@ function toPortablePathWin32(p) {
   if ((windowsPathMatch = p.match(WINDOWS_PATH_REGEXP)))
     p = `/${windowsPathMatch[1]}`;
   else if ((uncWindowsPathMatch = p.match(UNC_WINDOWS_PATH_REGEXP)))
-    p = `/unc/${uncWindowsPathMatch[1] ? `.dot/` : ``}${
-      uncWindowsPathMatch[2]
-    }`;
+    p = `/unc/${uncWindowsPathMatch[1] ? `.dot/` : ``}${uncWindowsPathMatch[2]}`;
   return p;
 }
 const toPortablePath =
@@ -667,9 +665,7 @@ class FakeFS {
       }
     } else {
       throw new Error(
-        `Unsupported file type (file: ${source}, mode: 0o${stat.mode
-          .toString(8)
-          .padStart(6, `0`)})`,
+        `Unsupported file type (file: ${source}, mode: 0o${stat.mode.toString(8).padStart(6, `0`)})`,
       );
     }
     const mode = stat.mode & 511;
@@ -1980,18 +1976,14 @@ function createErrorType(code, messageCreator, errorType) {
 const ERR_PACKAGE_IMPORT_NOT_DEFINED = createErrorType(
   `ERR_PACKAGE_IMPORT_NOT_DEFINED`,
   (specifier, packagePath, base) => {
-    return `Package import specifier "${specifier}" is not defined${
-      packagePath ? ` in package ${packagePath}package.json` : ``
-    } imported from ${base}`;
+    return `Package import specifier "${specifier}" is not defined${packagePath ? ` in package ${packagePath}package.json` : ``} imported from ${base}`;
   },
   TypeError,
 );
 const ERR_INVALID_MODULE_SPECIFIER = createErrorType(
   `ERR_INVALID_MODULE_SPECIFIER`,
   (request, reason, base = void 0) => {
-    return `Invalid module "${request}" ${reason}${
-      base ? ` imported from ${base}` : ``
-    }`;
+    return `Invalid module "${request}" ${reason}${base ? ` imported from ${base}` : ``}`;
   },
   TypeError,
 );
@@ -2005,28 +1997,18 @@ const ERR_INVALID_PACKAGE_TARGET = createErrorType(
       !StringPrototypeStartsWith(target, `./`);
     if (key === `.`) {
       assert(isImport === false);
-      return `Invalid "exports" main target ${JSONStringify(
-        target,
-      )} defined in the package config ${pkgPath}package.json${
-        base ? ` imported from ${base}` : ``
-      }${relError ? `; targets must start with "./"` : ``}`;
+      return `Invalid "exports" main target ${JSONStringify(target)} defined in the package config ${pkgPath}package.json${base ? ` imported from ${base}` : ``}${relError ? `; targets must start with "./"` : ``}`;
     }
-    return `Invalid "${
-      isImport ? `imports` : `exports`
-    }" target ${JSONStringify(
+    return `Invalid "${isImport ? `imports` : `exports`}" target ${JSONStringify(
       target,
-    )} defined for '${key}' in the package config ${pkgPath}package.json${
-      base ? ` imported from ${base}` : ``
-    }${relError ? `; targets must start with "./"` : ``}`;
+    )} defined for '${key}' in the package config ${pkgPath}package.json${base ? ` imported from ${base}` : ``}${relError ? `; targets must start with "./"` : ``}`;
   },
   Error,
 );
 const ERR_INVALID_PACKAGE_CONFIG = createErrorType(
   `ERR_INVALID_PACKAGE_CONFIG`,
   (path, base, message) => {
-    return `Invalid package config ${path}${
-      base ? ` while importing ${base}` : ``
-    }${message ? `. ${message}` : ``}`;
+    return `Invalid package config ${path}${base ? ` while importing ${base}` : ``}${message ? `. ${message}` : ``}`;
   },
   Error,
 );
@@ -2173,9 +2155,7 @@ function throwImportNotDefined(specifier, packageJSONUrl, base) {
   );
 }
 function throwInvalidSubpath(subpath, packageJSONUrl, internal, base) {
-  const reason = `request is not a valid subpath for the "${
-    internal ? "imports" : "exports"
-  }" resolution of ${fileURLToPath(packageJSONUrl)}`;
+  const reason = `request is not a valid subpath for the "${internal ? "imports" : "exports"}" resolution of ${fileURLToPath(packageJSONUrl)}`;
   throw new ERR_INVALID_MODULE_SPECIFIER(
     subpath,
     reason,

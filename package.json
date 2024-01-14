@@ -5,15 +5,15 @@
   "dependencies": {
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
-    "@mui/material": "^5.15.3",
-    "assemblyai": "^4.1.0",
+    "@mui/material": "^5.15.4",
+    "assemblyai": "^4.2.0",
     "axios": "^1.6.5",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "eslint": "^8.56.0",
     "express": "^4.18.2",
     "multer": "^1.4.5-lts.1",
-    "prettier": "^3.1.1",
+    "prettier": "^3.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "^5.0.1"
